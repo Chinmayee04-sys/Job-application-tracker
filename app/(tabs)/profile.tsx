@@ -44,9 +44,9 @@ export default function ProfileScreen() {
       onPress: () => setShowClear(true),
     },
   ];
-  const handleLogout = () => {
-    logout();
-    router.replace("/(auth)/login");
+  const handleLogout = async () => {
+    await logout();
+    router.replace("/login");
   };
   return (
 <View style={{ flex: 1, backgroundColor: colors.background }}>

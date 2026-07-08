@@ -139,7 +139,7 @@ export default function DashboardScreen() {
             >
               Recent Applications
 </Text>
-<TouchableOpacity onPress={() => router.push("/(tabs)/applications")}>
+<TouchableOpacity onPress={() => router.push("/applications")}>
 <Text
                 style={{
                   fontSize: 14,

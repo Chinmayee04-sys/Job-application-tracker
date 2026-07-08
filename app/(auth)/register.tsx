@@ -228,7 +228,7 @@ export default function RegisterScreen() {
             <Text style={{ fontSize: 15, color: colors.textSecondary }}>
               Already have an account?
             </Text>
-            <TouchableOpacity onPress={() => router.push("/(auth)/login")}>
+            <TouchableOpacity onPress={() => router.push("/login")}>
               <Text
                 style={{
                   fontSize: 15,

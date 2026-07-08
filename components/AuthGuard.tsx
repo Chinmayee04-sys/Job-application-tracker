@@ -14,7 +14,7 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
     const inAuthGroup = segments?.[0] === "(auth)";
 
     if (!isAuthenticated && !inAuthGroup) {
-      setTimeout(() => router.replace("/(auth)/login"), 50);
+      setTimeout(() => router.replace("/login"), 50);
     } else if (isAuthenticated && inAuthGroup) {
       setTimeout(() => router.replace("/"), 50);
     }
