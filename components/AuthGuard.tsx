@@ -16,7 +16,7 @@ export function AuthGuard({ children }: { children: React.ReactNode }) {
     if (!isAuthenticated && !inAuthGroup) {
       setTimeout(() => router.replace("/(auth)/login"), 50);
     } else if (isAuthenticated && inAuthGroup) {
-      setTimeout(() => router.replace("/(tabs)"), 50);
+      setTimeout(() => router.replace("/"), 50);
     }
   }, [isAuthenticated, isLoading, segments?.[0]]);
 
