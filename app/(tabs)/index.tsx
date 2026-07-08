@@ -6,7 +6,6 @@ import {
   RefreshControl,
   TouchableOpacity,
   Platform,
-  Linking,
 } from "react-native";
 import { useRouter } from "expo-router";
 import Animated, { FadeInUp, FadeInDown } from "react-native-reanimated";
@@ -265,10 +264,7 @@ export default function DashboardScreen() {
             </Text>
             {!jobsLoading && jobs.length > 0 && (
               <TouchableOpacity
-                onPress={() => {
-                  const first = jobs[0];
-                  if (first.jobUrl) Linking.openURL(first.jobUrl);
-                }}
+                onPress={() => router.push("/jobs")}
               >
                 <Text
                   style={{
